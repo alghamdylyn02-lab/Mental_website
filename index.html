@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrighterMind - Mental Health Support</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- #NAVBAR (Lesson 5, slides 21-22 - real code) -->
+    <nav class="navbar" id="home">
+        <div class="navbar__container">
+            <a href="#home"><img src="./images/logo.jpg" alt="logo" class="navbar__logo" /></a>
+
+            <div class="navbar__menu">
+                <a href="#AboutUs"><img class="navbar__menu_icon" src="./images/nav-about-us.jpg" alt="About us" /></a>
+            </div>
+            <div class="navbar__menu">
+                <a href="#AllGood"><img class="navbar__menu_icon" src="./images/nav-all-good.jpg" alt="All Good?" /></a>
+            </div>
+            <div class="navbar__menu">
+                <a href="#tips"><img class="navbar__menu_icon" src="./images/nav-advise-you.jpg" alt="Advise you" /></a>
+            </div>
+            <div class="navbar__menu">
+                <a href="#podcast"><img class="navbar__menu_icon" src="./images/nav-listen-me.jpg"
+                        alt="Listen Me" /></a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- #ABOUT US (Lesson 5, slides 27-32 - real code) -->
+        <section class="about" id="home">
+            <img class="about__image" src="./images/hero_image.png"
+                alt="A calm, meditating figure with a glowing heart above their head, representing a bright, healthy mind" />
+            <div class="about__container" id="AboutUs">
+                <div class="about__container_left">
+                    <h1 class="about__title">Your mental health kit in the form of
+                        <span class="underline">therapy talks</span>
+                    </h1>
+                </div>
+                <div class="about__container_right">
+                    <ul class="about__list">
+                        <li class="about__paragraph">
+                            The name "BrighterKind" conveys the idea of fostering a brighter outlook and mindset
+                            for students who may be struggling with various mental health challenges.
+                        </li>
+                        <li class="about__paragraph">
+                            The content is available for those seeking guidance from professionals who
+                            specialize in treating mental health issues.
+                        </li>
+                        <li class="about__paragraph">
+                            "Brighter Mind" is a new platform where users can listen to podcasts about mental
+                            health.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- divider before the moods section (Lesson 5, slide 39 - real code) -->
+        <div class="divider__container" id="AllGood">
+            <img class="divider" src="./images/divider.svg" alt="divider" />
+        </div>
+
+        <!-- #MOODS (Lesson 5, slides 40-50 - real code) -->
+        <section class="moods">
+            <div class="moods__container">
+                <h2 class="moods__title">Share your mood with us and tell us how you feel today</h2>
+                <div class="moods__main">
+                    <div class="moods__feels">
+                        <button class="moods__button moods__button_sad">SAD 😟</button>
+                        <button class="moods__button moods__button_great">GREAT@ 😟</button>
+                        <button class="moods__button moods__button_okay">OKAY 🙂</button>
+                        <button class="moods__button moods__button_worried">WORRIED@ 😨</button>
+                        <button class="moods__button moods__button_stressed">STRESSED @ 🥵🥶</button>
+                        <button class="moods__button moods__button_tired">TIRED 🙁</button>
+                    </div>
+                    <!--
+                
+          -->
+                    <div class="moods__card">
+                        <p class="moods__subtitle">How are you?</p>
+                        <ul class="moods__list">
+                            <li class="moods__list_1">Share your story with others.</li>
+                            <li class="moods__list_2">Read other users' stories and leave a comment.</li>
+                            <li class="moods__list_3">It is important that you know that you are not alone in
+                                this.</li>
+                        </ul>
+                        <input type="text" size="30" placeholder="Give your story a title" />
+                        <textarea rows="5" cols="30" placeholder="Write your story here..."></textarea>
+                        <button class="moods__card-button">
+                            <span class="moods__card-button_text">SHARE YOUR STORY</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- divider before the stories section -->
+        <div class="divider__container" id="stories">
+            <img class="divider" src="./images/divider.svg" alt="divider" />
+        </div>
+
+        <!-- #STORIES -->
+        <section class="comments">
+            <h2 class="comments__title">Some stories 💭</h2>
+            <div class="comments__container">
+
+                <div class="comments__card">
+                    <p class="comments__subtitle">Breaking Through the Storm</p>
+                    <ul class="comments__list">
+                        <li class="comments__list_1">Sarah's journey with mental health began in her late teens. At
+                            first, it was just a
+                            feeling of unease, a nagging anxiety that seemed to follow her wherever she went. She
+                            brushed it off as
+                            typical teenage angst, something that would surely pass with time. But as the years went by,
+                            the darkness
+                            only seemed to deepen.</li>
+                        <button class="comments__button">READ MORE →</button>
+                    </ul>
+                </div>
+
+                <div class="comments__card">
+                    <p class="comments__subtitle">The Healing Power of Connection</p>
+                    <ul class="comments__list">
+                        <li class="comments__list_1">Emma had always been a fiercely independent woman. Growing up in a
+                            small town, she
+                            learned from a young age to rely on no one but herself. But as she ventured into adulthood,
+                            Emma discovered
+                            that her self-reliance had its limits.
+
+                            It started with a feeling of overwhelming sadness—a heaviness in her chest that seemed to
+                            weigh her down
+                            with each passing day.</li>
+                        <button class="comments__button">READ MORE →</button>
+                    </ul>
+                </div>
+
+                <div class="comments__card">
+                    <p class="comments__subtitle">Finding Light in the Darkness</p>
+                    <ul class="comments__list">
+                        <li class="comments__list_1">It started in his early twenties—a deep sense of emptiness that
+                            seemed to swallow
+                            him whole. At first, he chalked it up to the pressures of adulthood, the stress of
+                            navigating a competitive
+                            job market and maintaining relationships. But as the years went by, the darkness only grew.
+                        </li>
+                        <button class="comments__button">READ MORE →</button>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- divider before the tips section -->
+        <div class="divider__container" id="OfferYou">
+            <img class="divider" src="./images/divider.svg" alt="divider" />
+        </div>
+
+        <!-- #TIPS / Recommended -->
+        <section class="tips" id="tips">
+            <h2 class="tips__title">Let us recommend you</h2>
+            <div class="tips__elements">
+
+                <div class="card card_depression">
+                    <div class="card__header">CONQUERING DEPRESSION</div>
+                    <div class="card__content-box">
+                        <ul>
+                            <li class="card__text">Depression is a mood disorder that causes a persistent feeling of
+                                sadness and loss of
+                                interest.</li>
+                            <li class="card__text">Symptoms of depression may include sadness, irritability, clinginess,
+                                worry, aches
+                                and pains, refusing to go to school, or being underweight.</li>
+                            <li class="card__text">Think back to when you feel fairly sure you weren't being affected by
+                                depression.
+                                Try writing your answers down if it helps</li>
+                        </ul>
+                    </div>
+                    <div class="card__footer">
+                        If you feel depressed, make an appointment to see your doctor or mental health professional as
+                        soon as you
+                        can.
+                    </div>
+                </div>
+
+                <div class="card card_anxiety">
+                    <div class="card__header">Overcoming anxiety</div>
+                    <div class="card__content-box">
+                        <ul>
+                            <li class="card__text">Anxiety is a feeling of fear, dread, and uneasiness.</li>
+                            <li class="card__text">Deep breathing exercises, progressive muscle relaxation, and
+                                mindfulness meditation
+                                can help calm your nervous system and reduce anxiety levels.</li>
+                            <li class="card__text">Stay active. Participate in activities that you enjoy and that make
+                                you feel good
+                                about yourself.</li>
+                            <li class="card__text">Enjoy social interaction and caring relationships, which can lessen
+                                your worries.</li>
+                        </ul>
+                    </div>
+                    <div class="card__footer">
+                        You feel like you're worrying too much and it's interfering with your work, relationships or
+                        other parts of
+                        your life
+                    </div>
+                </div>
+
+                <div class="card card_nutrition">
+                    <div class="card__header">TIPS FOR GOOD SLEEP</div>
+                    <div class="card__content-box">
+                        <ul>
+                            <li class="card__text">Develop a calming bedtime routine to signal to your body that it's
+                                time to wind
+                                down.</li>
+                            <li class="card__text">Aim to avoid electronic devices such as smartphones, computers, and
+                                TVs for at
+                                least an hour before bedtime.</li>
+                            <li class="card__text">Avoid heavy meals, caffeine, and alcohol close to bedtime, as these
+                                can disrupt
+                                sleep. Instead, opt for light snacks if you're hungry, and stay hydrated throughout the
+                                day.</li>
+                        </ul>
+                    </div>
+                    <div class="card__footer">
+                        By prioritizing good sleep hygiene and making small changes to your sleep habits, you can
+                        support your
+                        mental health and overall well-being.
+                    </div>
+                </div>
+
+                <!--
+          The slides didn't show the text content for these last two cards
+          (only their header titles were visible, in the duplicate-code
+          slide). Placeholder content below - swap for your own tips.
+        -->
+                <div class="card card_exercise">
+                    <div class="card__header">BEST EXERCISES</div>
+                    <div class="card__content-box">
+                        <ul>
+                            <li class="card__text">Placeholder - this card's text wasn't shown in the slides. A brisk
+                                20-30 minute
+                                walk most days can noticeably lift mood and energy.</li>
+                            <li class="card__text">Stretching or yoga before bed can ease tension built up during the
+                                day.</li>
+                            <li class="card__text">Even a few minutes of movement between study sessions helps reset
+                                focus.</li>
+                        </ul>
+                    </div>
+                    <div class="card__footer">
+                        Placeholder footer - replace with your own closing tip for this card.
+                    </div>
+                </div>
+
+                <div class="card card_stress">
+                    <div class="card__header">STUDY STRESS</div>
+                    <div class="card__content-box">
+                        <ul>
+                            <li class="card__text">Placeholder - this card's text wasn't shown in the slides. Break big
+                                assignments
+                                into smaller tasks so they feel less overwhelming.</li>
+                            <li class="card__text">Short breaks between study blocks (like the Pomodoro method) help
+                                avoid burnout.</li>
+                            <li class="card__text">Talking to a friend, teacher, or counselor about pressure you're
+                                feeling helps more
+                                than carrying it alone.</li>
+                        </ul>
+                    </div>
+                    <div class="card__footer">
+                        Placeholder footer - replace with your own closing tip for this card.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="divider__container" id="OfferYou2">
+            <img class="divider" src="./images/divider.svg" alt="divider" />
+        </div>
+
+        <!-- #PODCAST -->
+        <section class="podcast" id="podcast">
+            <div class="podcast__container">
+                <h2 class="podcast__title">Get to know these Podcasts ◊</h2>
+
+                <div class="podcast__show">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/episode/2XV4mXQSEjmNBD68uNoITg?utm_source=generator"
+                        width="100%" height="200" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    <div class="podcast__tags-container">
+                        <div class="podcast__tags">Depression</div>
+                        <div class="podcast__tags">Child</div>
+                        <div class="podcast__tags">Anxious</div>
+                    </div>
+                </div>
+
+                <!--
+          The slides said to "find the embedded code and duplicate the HTML"
+          for more episodes, but didn't show the other 3 episodes' URLs or
+          tags. These reuse the same real, working Spotify embed as
+          placeholders - swap the src and tags for episodes you pick,
+          exactly as the lesson describes.
+        -->
+                <div class="podcast__show">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/episode/2XV4mXQSEjmNBD68uNoITg?utm_source=generator"
+                        width="100%" height="200" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    <div class="podcast__tags-container">
+                        <div class="podcast__tags">Placeholder</div>
+                        <div class="podcast__tags">Replace me</div>
+                    </div>
+                </div>
+
+                <div class="podcast__show">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/episode/2XV4mXQSEjmNBD68uNoITg?utm_source=generator"
+                        width="100%" height="200" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    <div class="podcast__tags-container">
+                        <div class="podcast__tags">Placeholder</div>
+                        <div class="podcast__tags">Replace me</div>
+                    </div>
+                </div>
+
+                <div class="podcast__show">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/episode/2XV4mXQSEjmNBD68uNoITg?utm_source=generator"
+                        width="100%" height="200" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    <div class="podcast__tags-container">
+                        <div class="podcast__tags">Placeholder</div>
+                        <div class="podcast__tags">Replace me</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- #FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__top-menu">
+
+                <div class="footer__left-container">
+                    <a href="#home">
+                        <img class="footer__logo" src="./images/logo.jpg" alt="logo" />
+                    </a>
+                </div>
+
+                <div class="footer__right-container">
+                    <div class="footer__column">
+                        <p class="footer__column-title">Us</p>
+                        <ul>
+                            <li><a class="footer__links" href="#AboutUs">About us</a></li>
+                            <li><a class="footer__links" href="#">Contact us</a></li>
+                            <li><a class="footer__links" href="#stories">Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <ul>
+                            <li>
+                                <a class="footer__links" href="#AllGood">Moods</a>
+                            </li>
+                            <li>
+                                <a class="footer__links" href="#tips">Recommendations</a>
+                            </li>
+                            <li><a class="footer__links" href="#podcast">Podcast</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom-menu">
+                <div class="footer__left-container">
+                    <img class="footer__socials" src="./images/linkedin.svg" alt="linkedin" />
+                    <p class="footer__links">
+                        <a class="footer__links" href="#">Privacy policies</a>
+                    </p>
+                    <p class="footer__links">
+                        <a class="footer__links" href="#">Terms &amp; Services</a>
+                    </p>
+                </div>
+                <div class="footer__right-container">
+                    <a class="footer__links" href="#">&copy; Copyright 2023, BrightChamps</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

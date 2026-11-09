@@ -1,0 +1,815 @@
+:root {
+    --bg-light: #f4f1ed;
+    --bg-dark: #000000;
+    --primary-light: #ffffff;
+    --primary-dark: #15181c;
+    --text-main: #000000;
+    --text-light: #ffffff;
+    --text-gray: #a1a1a1;
+    --light-blue-accent: #7ab8f7;
+    --moradito: #b29aff;
+    --arena: #e8dfc8;
+    --verde: #c4e587;
+    --rosa: #fd9191;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: "Helvetica", sans-serif;
+    color: hsl(0, 0%, 15%);
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+section,
+footer {
+    padding-inline: 50px;
+}
+
+.navbar {
+    padding: 4px 60px 0px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    position: fixed;
+    z-index: 3;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 10px;
+    top: 10px;
+}
+
+.navbar__logo {
+    width: 192px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 18px;
+    padding: 5px 10px;
+    object-fit: contain;
+}
+
+.navbar__menu {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+/* the icon's own sizing wasn't shown on the slide - sized to fill the
+   circular .navbar__menu container it sits in */
+.navbar__menu_icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*-----------------------------------------*\
+  #ABOUT US (Lesson 5, slides 27-32 - real code)
+\*-----------------------------------------*/
+.about {
+    padding-inline: 0;
+}
+
+.about__image {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.about__container {
+    margin: auto;
+    max-width: 1220px;
+    min-height: 446px;
+    background-color: white;
+    border-radius: 69px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 30px;
+}
+
+.about__container_left {
+    width: 500px;
+    max-width: 100%;
+    padding-left: 93px;
+}
+
+.about__container_right {
+    width: 492px;
+    max-width: 100%;
+    padding-right: 93px;
+}
+
+.about__title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* the slide names this class but never shows its CSS - styled as a
+   simple accent underline under "therapy talks" */
+.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--rosa);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+}
+
+.about__list {
+    list-style-image: url(./images/bulletpoint.svg);
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+    margin: 0;
+    padding: 0;
+}
+
+.about__paragraph {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: justify;
+    padding-left: 27px;
+    position: relative;
+    list-style: none;
+}
+
+.about__paragraph::before {
+    content: url(./images/bulletpoint.svg);
+    position: absolute;
+    top: -2px;
+    left: -27px;
+}
+
+/*-----------------------------------------*\
+  #MOODS (Lesson 5, slides 37-50 - real code)
+\*-----------------------------------------*/
+.moods {
+    padding-block: 40px 70px;
+}
+
+.moods__container {
+    max-width: 1220px;
+    margin: auto;
+}
+
+.moods__title {
+    font-size: 1.9rem;
+    margin-block-end: 30px;
+    text-align: center;
+}
+
+.moods__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.moods__feels {
+    display: grid;
+    /* minmax(0, 1fr) - not plain 1fr - is what lets these columns shrink
+     below the button's 220px width on narrow screens instead of forcing
+     the whole grid (and the page) wider than the viewport */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* .moods__button (Lesson 5, slide 43 - real code) */
+.moods__button {
+    width: 220px;
+    max-width: 100%;
+    height: 60px;
+    border: 1.5px solid black;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 19px;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+/* pop animation on hover (Lesson 5, slide 46 - real code) */
+.moods__button:hover {
+    animation: 0.7s pop-on-hover ease;
+    cursor: pointer;
+}
+
+@keyframes pop-on-hover {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/*
+  Only the first button's hover color (light blue) was shown on slide 47
+  (.moods__button:nth-of-type(1):hover). The other five reuse the
+  remaining colors already defined in :root (the slides defined
+  --moradito / --arena / --verde / --rosa specifically as "variables
+  which we will use later" - this is the "later"), one per button, since
+  that's the only unshown-but-clearly-intended pattern to follow.
+*/
+.moods__button:nth-of-type(1):hover {
+    background-color: #afd2f5;
+    border-color: #afd2f5;
+}
+
+.moods__button:nth-of-type(2):hover {
+    background-color: var(--verde);
+    border-color: var(--verde);
+}
+
+.moods__button:nth-of-type(3):hover {
+    background-color: var(--arena);
+    border-color: var(--arena);
+}
+
+.moods__button:nth-of-type(4):hover {
+    background-color: var(--moradito);
+    border-color: var(--moradito);
+}
+
+.moods__button:nth-of-type(5):hover {
+    background-color: var(--rosa);
+    border-color: var(--rosa);
+}
+
+.moods__button:nth-of-type(6):hover {
+    background-color: var(--light-blue-accent);
+    border-color: var(--light-blue-accent);
+}
+
+/*
+  .moods__card / .moods__list / .moods__card-button: the HTML was shown
+  (slide 50) but no CSS screenshot covered this card's look, so - same
+  as the .comments__card and .card tips cards in Lesson 6 - it's
+  rebuilt here to match the site's white-card style and the "Run the
+  code" result screenshot (slide 54).
+*/
+.moods__card {
+    background: white;
+    border-radius: 30px;
+    padding: 35px 30px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.moods__subtitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.moods__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: disc;
+    margin-inline-start: 18px;
+    color: hsl(0, 0%, 30%);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.moods__card input[type="text"],
+.moods__card textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border: 1.5px solid hsl(0, 0%, 80%);
+    border-radius: 12px;
+    padding: 10px 14px;
+    resize: vertical;
+}
+
+.moods__card-button {
+    align-self: flex-start;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    background: hsl(0, 0%, 10%);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.moods__card-button:hover {
+    background: hsl(0, 0%, 30%);
+}
+
+/*-----------------------------------------*\
+  #DIVIDER
+\*-----------------------------------------*/
+.divider__container {
+    padding-block: 20px;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.divider {
+    width: 100%;
+    height: auto;
+}
+
+/*-----------------------------------------*\
+  #STORIES / comments
+  (HTML structure was shown on the slides, but no CSS screenshot covered
+  this section's styling - the look below is rebuilt to match what the
+  "Run the code" result screenshot actually shows: an off-white section,
+  three white rounded cards, and a black pill "READ MORE" button)
+\*-----------------------------------------*/
+.comments {
+    padding-block: 20px 70px;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.comments__title {
+    font-size: 2rem;
+    margin-block-end: 30px;
+}
+
+.comments__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    background: hsl(40, 33%, 94%);
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.comments__card {
+    background: hsl(0, 0%, 100%);
+    border-radius: 14px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments__subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-block-end: 15px;
+}
+
+.comments__list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.comments__list_1 {
+    list-style: disc;
+    margin-inline-start: 18px;
+    color: hsl(0, 0%, 30%);
+    line-height: 1.6;
+    margin-block-end: 20px;
+    flex-grow: 1;
+}
+
+.comments__button {
+    align-self: flex-start;
+    margin-block-start: auto;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 10%);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.comments__button:hover {
+    background: hsl(0, 0%, 30%);
+}
+
+/*-----------------------------------------*\
+  #TIPS
+\*-----------------------------------------*/
+.tips {
+    padding-block: 20px 70px;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.tips__title {
+    font-size: 2rem;
+    margin-block-end: 30px;
+}
+
+.tips__elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/*-----------------------------------------*\
+  #CARD (the tip / recommendation cards)
+\*-----------------------------------------*/
+.card {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* the drop-shadow from the slides, applied to the whole card */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /* Add a drop shadow effect */
+    transition: transform 0.2s ease;
+}
+
+.card__header {
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5);
+    /* Apply a text shadow */
+}
+
+.card__content-box {
+    background: hsla(0, 0%, 100%, 0.9);
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card__content-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card__text {
+    list-style: disc;
+    margin-inline-start: 18px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: hsl(0, 0%, 20%);
+}
+
+.card__footer {
+    padding: 16px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: hsla(0, 0%, 0%, 0.08);
+}
+
+/* Background image for the card */
+.card_depression {
+    /* Background image for the card */
+    background: url(./images/card_order.png);
+    /* URL of the background image */
+    background-size: 100% 100%;
+    /* Ensure the background image covers the entire card */
+    opacity: 0.8;
+    /* Set the opacity of the card to 80% */
+}
+
+/* the slides only fully demoed .card_depression's background rule - the
+   other 4 cards' own background images follow the same pattern with a
+   different placeholder image and color per card */
+.card_anxiety {
+    background: url(./images/card_anxiety_bg.png);
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+.card_nutrition {
+    background: url(./images/card_sleep_bg.png);
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+.card_exercise {
+    background: url(./images/card_exercise_bg.png);
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+.card_stress {
+    background: url(./images/card_stress_bg.png);
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+/* Rotate the first card */
+.card:nth-of-type(1) {
+    /* Rotate the card counterclockwise by -4.29 degrees */
+    transform: rotate(-4.29deg);
+}
+
+/* Rotate the second card */
+.card:nth-of-type(2) {
+    /* Rotate the card clockwise by 3.61 degrees */
+    transform: rotate(3.61deg);
+}
+
+/* Rotate the third card */
+.card:nth-of-type(3) {
+    transform: rotate(3.51deg);
+    /* Rotate the card clockwise by 3.51 degrees */
+}
+
+/* Rotate the fourth card */
+.card:nth-of-type(4) {
+    /* Rotate the card clockwise by 5.66 degrees */
+    transform: rotate(5.66deg);
+}
+
+/* Rotate the fifth card */
+.card:nth-of-type(5) {
+    /* Rotate the card counterclockwise by -2.46 degrees */
+    transform: rotate(-2.46deg);
+}
+
+/* Apply the "wiggle" animation to the card when hovered */
+.card:hover {
+    /* Apply the "wiggle" animation with a duration of 0.35 seconds and ease timing */
+    animation: wiggle 0.35s ease;
+}
+
+/* Define a keyframe animation named "wiggle" */
+@keyframes wiggle {
+
+    /* Rotate the element by 1 degree at 25% of the animation duration */
+    25% {
+        transform: rotate(1deg);
+    }
+
+    /* Rotate the element by -1 degree at 50% of the animation duration */
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    /* Rotate the element by 1 degree again at 75% of the animation duration */
+    75% {
+        transform: rotate(1deg);
+    }
+}
+
+/*-----------------------------------------*\
+  #PODCAST
+  (HTML/iframe was shown on the slides; the surrounding section CSS and
+  the tag-pill styling weren't, so they're rebuilt to match the "Run the
+  code" result screenshot: cream section, stacked embeds, outlined pill
+  tags underneath each one)
+\*-----------------------------------------*/
+.podcast {
+    padding-block: 20px 70px;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.podcast__title {
+    font-size: 2rem;
+    margin-block-end: 30px;
+}
+
+.podcast__show {
+    margin-block-end: 30px;
+}
+
+.podcast__tags-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-block-start: 15px;
+}
+
+.podcast__tags {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border: 2px solid hsl(0, 0%, 10%);
+    border-radius: 30px;
+}
+
+/*-----------------------------------------*\
+  #FOOTER
+\*-----------------------------------------*/
+/* Styles for the footer */
+.footer {
+    max-width: 1220px;
+    /* Maximum width of the footer */
+    background-color: white;
+    /* Background color */
+    margin: auto;
+    /* Center the footer horizontally */
+    border-radius: 69px;
+    /* Rounded corners */
+    margin-top: 80px;
+    /* Top margin */
+}
+
+/* Container for footer content */
+.footer__container {
+    padding: 40px 56px 35px 67px;
+    /* Padding inside the container */
+}
+
+/* Top menu container within the footer */
+.footer__top-menu {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    justify-content: space-between;
+    /* Distribute items evenly along the main axis */
+    padding-bottom: 60px;
+    /* Bottom padding */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Bottom menu container within the footer */
+.footer__bottom-menu {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    justify-content: space-between;
+    /* Distribute items evenly along the main axis */
+    flex-wrap: wrap;
+    gap: 20px;
+    border-block-start: 1px solid hsl(0, 0%, 90%);
+    padding-block-start: 20px;
+}
+
+/* Styles for the left container within the footer */
+.footer__left-container {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    gap: 25px;
+    /* Spacing between items */
+    align-items: center;
+}
+
+/* Styles for the right container within the footer */
+.footer__right-container {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    flex-wrap: wrap;
+    /* added - the slide's fixed 73px gap otherwise
+                       overflows narrow screens */
+    gap: 73px;
+    /* Spacing between items */
+    align-items: flex-start;
+}
+
+.footer__logo {
+    width: 129px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer__column-title {
+    font-weight: 700;
+    margin-block-end: 12px;
+}
+
+.footer__column ul li {
+    margin-block-end: 10px;
+}
+
+.footer__links {
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 35%);
+}
+
+.footer__links:hover {
+    color: hsl(0, 0%, 10%);
+    text-decoration: underline;
+}
+
+.footer__socials {
+    width: 24px;
+    height: 24px;
+}
+
+.footer__bottom-menu .footer__left-container p.footer__links {
+    font-size: 0.9rem;
+}
+
+/*-----------------------------------------*\
+  #RESPONSIVE (added - not from any slide)
+  None of the slides covered narrow/mobile screens, but a fixed navbar
+  sized for a 1200px desktop layout doesn't fit next to 4 full-size
+  circular badges on a phone-width screen (or Replit's preview pane) -
+  it wraps onto a second line, and the fixed body padding-top above
+  isn't tall enough for that second line, so the navbar ends up
+  overlapping the page content. This breakpoint shrinks the navbar and
+  removes the About Us section's fixed pixel widths so everything stays
+  on one navbar row and nothing overlaps or scrolls sideways.
+\*-----------------------------------------*/
+@media (max-width: 760px) {
+    .navbar {
+        padding-inline: 16px;
+    }
+
+    .navbar__container {
+        gap: 6px;
+    }
+
+    .navbar__logo {
+        width: 92px;
+        height: 30px;
+        border-radius: 10px;
+        padding: 4px 6px;
+    }
+
+    .navbar__menu,
+    .navbar__menu_icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .about__container {
+        padding: 30px 24px;
+    }
+
+    .about__container_left,
+    .about__container_right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about__title {
+        font-size: 1.7rem;
+    }
+
+    .moods__button {
+        font-size: 15px;
+        height: 50px;
+    }
+
+    section,
+    footer {
+        padding-inline: 24px;
+    }
+
+    .footer__container {
+        padding: 30px 20px 24px 20px;
+    }
+
+    .footer__right-container {
+        gap: 30px;
+    }
+}
